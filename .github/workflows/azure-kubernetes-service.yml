@@ -35,11 +35,12 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_CONTAINER_REGISTRY: "your-azure-container-registry"
-  CONTAINER_NAME: "your-container-name"
-  RESOURCE_GROUP: "your-resource-group"
-  CLUSTER_NAME: "your-cluster-name"
-  DEPLOYMENT_MANIFEST_PATH: "your-deployment-manifest-path"
+  AZURE_CONTAINER_REGISTRY: "nsacrd"
+  CONTAINER_NAME: "image"
+  RESOURCE_GROUP: "rg"
+  CLUSTER_NAME: "k8"
+  DEPLOYMENT_MANIFEST_PATH: "aks/deployment.yml"
+                          
 
 jobs:
   buildImage:

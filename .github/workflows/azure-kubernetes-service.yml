@@ -53,12 +53,13 @@ jobs:
       - uses: actions/checkout@v3
 
       # Logs in with your Azure credentials
+
       - name: Azure login
         uses: azure/login@v1.4.6
         with:
-          client-id: 59db394b-6ff8-4d04-9abc-f12d6aa4311b
-          tenant-id: 3af1e392-2b42-4c36-80e5-33d4a5bb115c
-          subscription-id: 311c1e58-0247-42d1-9e39-6c2b6442697c
+          client-id: "59db394b-6ff8-4d04-9abc-f12d6aa4311b"
+          tenant-id: "3af1e392-2b42-4c36-80e5-33d4a5bb115c"
+          subscription-id: "311c1e58-0247-42d1-9e39-6c2b6442697c"
 
       # Builds and pushes an image up to your Azure Container Registry
       - name: Build and push image to ACR

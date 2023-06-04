@@ -35,7 +35,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_CONTAINER_REGISTRY: "nsacrd"
+  AZURE_CONTAINER_REGISTRY: "acrnsd"
   CONTAINER_NAME: "image"
   RESOURCE_GROUP: "rg"
   CLUSTER_NAME: "k8"
@@ -56,9 +56,9 @@ jobs:
       - name: Azure login
         uses: azure/login@v1.4.6
         with:
-          client-id: ${{ secrets.service_principal }}
-          tenant-id: ${{ secrets.tenant }}
-          subscription-id: ${{ secrets.subscription }}
+          client-id: 59db394b-6ff8-4d04-9abc-f12d6aa4311b
+          tenant-id: 3af1e392-2b42-4c36-80e5-33d4a5bb115c
+          subscription-id: 311c1e58-0247-42d1-9e39-6c2b6442697c
 
       # Builds and pushes an image up to your Azure Container Registry
       - name: Build and push image to ACR
@@ -80,9 +80,9 @@ jobs:
       - name: Azure login
         uses: azure/login@v1.4.6
         with:
-          client-id: ${{ secrets.service_principal }}
-          tenant-id: ${{ secrets.tenant }}
-          subscription-id: ${{ secrets.subscription }}
+          client-id: 59db394b-6ff8-4d04-9abc-f12d6aa4311b
+          tenant-id: 3af1e392-2b42-4c36-80e5-33d4a5bb115c
+          subscription-id: 311c1e58-0247-42d1-9e39-6c2b6442697c
 
       # Use kubelogin to configure your kubeconfig for Azure auth
       - name: Set up kubelogin for non-interactive login
@@ -94,8 +94,8 @@ jobs:
       - name: Get K8s context
         uses: azure/aks-set-context@v3
         with:
-          resource-group: ${{ env.RESOURCE_GROUP }}
-          cluster-name: ${{ env.CLUSTER_NAME }}
+          resource-group: rg
+          cluster-name: k8
           admin: 'false'
           use-kubelogin: 'true'
 

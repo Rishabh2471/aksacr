@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: gowebapi 
-          image: nginx
+          image: acrnsd.azurecr.io/k8sflask
           ports:
           - containerPort: 80

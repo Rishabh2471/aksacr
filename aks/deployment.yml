@@ -17,3 +17,6 @@ spec:
           image: acrnsd.azurecr.io/k8sflask
           ports:
           - containerPort: 80
+      imagePullSecrets:
+      - name: k8s-secret  
+          

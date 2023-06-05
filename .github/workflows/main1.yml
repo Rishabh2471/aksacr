@@ -74,5 +74,4 @@ jobs:
           aks/service.yml
         images: |
           acrnsd.azurecr.io/k8sflask:${{ github.sha }}
-        imagepullsecrets: |
-          k8s-secret
+

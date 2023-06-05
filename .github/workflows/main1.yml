@@ -65,12 +65,7 @@ jobs:
         cluster-name: k8
         resource-group: rg
         
-    - uses: Azure/k8s-create-secret@v1
-      with:
-        container-registry-url: acrnsd.azurecr.io
-        container-registry-username: ${{ secrets.ACR_USERNAME }}
-        container-registry-password: ${{ secrets.ACR_PASSWORD }}
-        secret-name: k8s-secret
+    
 
     - uses: Azure/k8s-deploy@v1
       with:
